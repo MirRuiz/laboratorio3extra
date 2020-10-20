@@ -1,6 +1,6 @@
 const empleado = {
     bruto: 50000,
-    hijos: 2,
+    hijos: 0,
     pagas: 14
 };
 
@@ -22,13 +22,11 @@ sueldoNeto = empleado.bruto - retencion;
 
 console.log(sueldoNeto);
 
-let retencionHijos
-if(empleado.hijos >= 1){
-    retencionHijos = empleado.bruto * 0.02;
-} else {
-    retencionHijos = 0;
-}
+let retencionHijos ;
+
+empleado.hijos >= 1 ? retencionHijos = empleado.bruto * 0.02 : retencionHijos = 0 ;
 
 sueldoNeto = empleado.bruto-(retencion - retencionHijos);
 console.log(sueldoNeto);
+
 
